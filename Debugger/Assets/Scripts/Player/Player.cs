@@ -56,11 +56,12 @@ public class Player : LivingEntity
      */ 
     public override void Move()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector2 newVelocity = new Vector2(horizontal, vertical);
-        newVelocity.Normalize();
-        rb.velocity = newVelocity * speed;
+        // TODO: Implement player movement using RigidBody velocity
+        
+        // you may want to change these values
+        float horizontal = 0; 
+        float vertical = 0;
+        
         anim.SetFloat("speed", Mathf.Abs(horizontal) + Mathf.Abs(vertical));
     }
 
